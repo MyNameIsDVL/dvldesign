@@ -1,0 +1,8 @@
+<div class="dvl-container">
+    <app-top-nav (logOut)="logOut()" (uploadImg)="uploadImg($event)" (handleFileInput)="handleFileInput($event)" [imageURL]="imageURL" [claim]="claim"></app-top-nav>
+    <app-side-bar [claim]="claim" (goToHomePage)="goToHomePage()" (goToVacationsPage)="goToVacationsPage()" (goToTimeWorkPage)="goToTimeWorkPage()" (goToQuestionnairePage)="goToQuestionnairePage()"
+    [imageURL]="imageURL"></app-side-bar>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

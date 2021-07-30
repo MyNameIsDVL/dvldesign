@@ -1,0 +1,38 @@
+<div class="dvl-container">
+    <div class="dvl-card">
+        <div class="dvl-home-img">
+            <img src="../../../assets/images/home.webp" />
+        </div>
+        <div class="dvl-card-container">
+            <h2>Registration</h2>
+            <form #registrationForm="ngForm" (ngSubmit)="register(registrationForm); registerUserSettingsTem(registrationForm)"> 
+                <div class="dvl-form-field">
+                    <label>User name</label>
+                    <input class="dvl-input" type="text" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName">
+                </div>
+                <div class="dvl-form-field">
+                    <label>Email</label>
+                    <input class="dvl-input" type="email" name="Email" #Email="ngModel" [(ngModel)]="user.Email">
+                </div>
+                <div class="dvl-form-field">
+                    <label>Password</label>
+                    <input class="dvl-input" type="password" name="Password" #Password="ngModel" [(ngModel)]="user.Password">
+                </div>
+                <div class="dvl-form-field">
+                    <label>First name</label>
+                    <input class="dvl-input" type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="user.FirstName">
+                </div>
+                <div class="dvl-form-field">
+                    <label>Last name</label>
+                    <input class="dvl-input" type="text" name="LastName" #LastName="ngModel" [(ngModel)]="user.LastName">
+                </div>
+                <div class="dvl-form-field">
+                    <button name="submit" type="submit">Sign in</button>
+                </div>
+                <div class="dvl-form-field">
+                    <span>Go to&nbsp;<a (click)="goToHomeTem()">home</a>&nbsp;/&nbsp;<a (click)="goToLogInTem()">login</a></span>
+                </div>
+            </form>
+        </div>      
+    </div>
+</div>

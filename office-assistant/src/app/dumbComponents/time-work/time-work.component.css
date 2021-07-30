@@ -1,0 +1,187 @@
+.dvl-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin: 10px 10px 10px 10px;
+    overflow-x: auto;
+}
+
+/*table*/
+
+.dvl-table-to-update {
+    margin: 0 30px 0 20px;
+}
+
+.dvl-box .container thead tr {
+    padding: 10px;
+}
+
+.dvl-box .container thead tr th {
+    font-weight: normal;
+    font-size: 1em;
+    color: white;
+}
+
+.dvl-box .container {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    display: table;
+}
+
+.dvl-box .container th {
+	padding: 5px; 
+}
+
+/* Background-color of the odd rows */
+.dvl-box .container tr:nth-child(odd) {
+	background-color: #323C50;
+}
+
+/* Background-color of the even rows */
+.dvl-box .container tr:nth-child(even) {
+	background-color: #2C3446;
+}
+
+.dvl-box .container th {
+	background-color: #1F2739;
+}
+
+.dvl-box form .container tbody tr td input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 200px;
+}
+
+.dvl-box form .container tbody tr td h3 {
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.dvl-box form .dvl-group-panel .dvl-group button {
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box form .dvl-group-panel .dvl-group button:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-box form .dvl-group-panel {
+    display: flex;
+}
+
+.dvl-box form .dvl-group-panel .dvl-group {
+    display: block;
+    padding: 10px;
+}
+
+.dvl-box form .dvl-group-panel .dvl-group input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.dvl-box form .container tbody tr td button {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s linear;
+    margin: 10px;
+}
+
+.dvl-box form .container tbody tr td button:hover {
+    background-color: white;
+    color: #2b2e4a;
+}
+
+.username-input-display-none {
+    display: none !important;
+}
+
+/*stopwatch*/
+
+.dvl-box .dvl-stopwatch {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #2b2e4a;
+    width: 400px;
+}
+
+.dvl-box .dvl-stopwatch .screen {
+    margin: 0;
+    background-color: white;
+    color: #2b2e4a;
+    font-size: 30px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.dvl-box .dvl-stopwatch .screen span {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+.dvl-box .dvl-stopwatch .dvl-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.dvl-box .dvl-stopwatch .dvl-buttons button {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s linear;
+    margin: 0 5px 0 5px;
+}
+
+.dvl-box .dvl-stopwatch .dvl-buttons button:hover {
+    background-color: white;
+    color: #2b2e4a;
+}
+
+
+

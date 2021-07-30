@@ -1,0 +1,121 @@
+.dvl-home-box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    width: 100%;
+}
+
+.dvl-home-box-container .dvl-box h3 {
+    text-align: center;
+    position: relative;
+    padding: 10px
+}
+
+.dvl-home-box-container .dvl-box h3::after {
+    content: '';
+    height: 3px;
+    width: 60%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: block;
+    background-color: black;
+}
+
+.dvl-home-box-container .dvl-box {
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content {
+    padding: 20px;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content p {
+    padding: 5px 0 5px 0;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content p .dvl-t {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    -webkit-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 5px rgba(0,0,0,0.8);
+    box-shadow:0 0 5px rgba(0,0,0,0.8);
+}
+
+.dvl-home-box-container .dvl-box .dvl-content p .dvl-c {
+    margin-left: 10px;
+}
+
+/*limit vacation circle*/
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin: 0 auto;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: brown;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 14) / 100);
+    stroke: black;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent .dvl-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.dvl-home-box-container .dvl-box .dvl-content .dvl-limit-box .dvl-percent .dvl-number h2 {
+    color: black;
+    font-size: 30px;
+    margin: 0;
+}
+

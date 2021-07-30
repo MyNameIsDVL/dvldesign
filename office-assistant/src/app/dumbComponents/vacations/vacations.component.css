@@ -1,0 +1,213 @@
+.dvl-box {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 400px 2fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin: 10px 10px 10px 10px;
+}
+
+.dvl-box .dvl-card {
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    background-color: white;
+    border-radius: 10px;
+    height: 500px;
+}
+
+.dvl-box .dvl-card .dvl-card-container {
+    padding: 20px;
+}
+
+.dvl-box .dvl-card .dvl-card-container h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #241623;
+    text-align: center;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field {
+    padding: 5px;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field label {
+    display: block;
+    color: #241623;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field select {
+    height: 35px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field button::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -25px;
+    left: 0;
+    background-color: #241623;
+    height: 1px;
+    width: 100%;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field button {
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box .dvl-card .dvl-card-container .dvl-form-field button:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-100 {
+    height: 100%;
+    margin: 20px;
+}
+
+.dvl-100 h2 {
+    text-align: center;
+}
+
+.dvl-box .dvl-100 .dvl-card-box-flex {
+    display: block;
+    list-style: none;
+    margin: 0;
+    -webkit-box-shadow:0 0 2px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 2px rgba(0,0,0,0.8);
+    box-shadow:0 0 2px rgba(0,0,0,0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+}
+
+.dvl-box .dvl-100 .dvl-card-box-flex li {
+    padding: 10px;
+}
+
+.dvl-box .dvl-100 .dvl-card-box-flex .dvl-remove {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    top: 5px;
+    right: 5px;
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box .dvl-100 .dvl-card-box-flex .dvl-remove:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-none {
+    display: none;
+}
+
+.dvl-empty h2 {
+    color: brown;
+}
+
+/*Vacations limit*/
+
+.dvl-box .dvl-content .dvl-limit-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    margin: 0 auto;
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    border-radius: 10px;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle {
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle:nth-child(1) {
+    stroke-dashoffset: 0;
+    stroke: brown;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 14) / 100);
+    stroke: black;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent .dvl-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.dvl-box .dvl-content .dvl-limit-box .dvl-percent .dvl-number h2 {
+    color: black;
+    font-size: 30px;
+    margin: 0;
+}

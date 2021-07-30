@@ -1,0 +1,306 @@
+nav {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: #2b2e4a;
+    box-shadow: 0 5px 10px -5px black;
+}
+
+nav span {
+    position: absolute;
+    top: 5px;
+    left: 50px;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav span img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+nav .dvl-wrapper {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+nav .dvl-wrapper ul {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav .dvl-wrapper ul li {
+    margin-left: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+nav .dvl-wrapper ul li a {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s linear;
+}
+
+nav .dvl-wrapper ul li a:hover {
+    background-color: white;
+    color: #2b2e4a;
+}
+
+nav .dvl-wrapper ul li a fa-icon {
+    font-size: 20px;
+}
+
+/*settings-bar*/
+
+.dvl-settings-bar {
+    background-color: #2b2e4a;
+    position: fixed;
+    top: 50px;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    transition: 0.5s linear;
+    z-index: 9999;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content {
+    height: 100%;
+    margin: 10px;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer form {
+    width: 100%;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer h3 {
+    color: white;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer form input {
+    height: 30px;
+    width: 200px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    margin: 5px 0 5px 0;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer form button {
+    border: 1px solid white;
+    color: white;
+    transition: 0.5s linear;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-account-changer form button:hover {
+    border: 1px solid #888;
+    background-color: white;
+    color: #241623;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-colour-set {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-colour-set h3 {
+    color: white;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.dvl-settings-information-span {
+    font-size: 10px;
+    color: white;
+}
+
+.dvl-settings-information-span p {
+    margin: 0;
+    padding: 12px 0 12px 0;
+}
+
+/*style-btn*/
+
+.dvl-toggle {
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.dvl-toggle:before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background-color: #888;
+    border-radius: 8px;
+}
+
+.dvl-toggle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 3px 8px rgba(46, 44, 44, 0.5);
+            box-shadow: 0 3px 8px rgba(46, 44, 44, 0.5);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.dvl-toggle span:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: -18px;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(79, 46, 220, 0.5);
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 1;
+    pointer-events: none;
+}
+
+#toInput:checked + .dvl-toggle:before {
+    background-color: #888;
+}
+
+#toInput:checked + .dvl-toggle span {
+    background-color: white;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+    -webkit-transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25);
+    transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25);
+    -webkit-box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+            box-shadow: 0 3px 8px rgba(79, 46, 220, 0.2);
+}
+
+#toInput:checked + .dvl-toggle span:before {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+}
+
+.dvl-center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.active {
+    right: 0 !important;
+}
+
+/*change avatar*/
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set h3 {
+    color: white;
+    margin: 5px 0 5px 0;
+    font-weight: bold;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form {
+    display: block;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form .dvl-group label {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form .dvl-group {
+    flex-direction: column;
+    padding: 10px;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form .dvl-group img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form .dvl-group input {
+    height: 30px;
+    width: 100%;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    margin: 5px 0 5px 0;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form button {
+    border: 1px solid white;
+    color: white;
+    transition: 0.5s linear;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-settings-bar .dvl-settings-bar-content .dvl-avatar-set form button:hover {
+    border: 1px solid #888;
+    background-color: white;
+    color: #241623;
+}

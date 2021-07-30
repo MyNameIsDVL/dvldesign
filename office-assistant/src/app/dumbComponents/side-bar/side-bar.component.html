@@ -1,0 +1,26 @@
+<div class="side-bar">
+    <div class="dvl-side-loged-info">
+        <div class="dvl-img">
+            <img [src]="imageURL" alt="user avatar">
+        </div>
+        <div *ngIf="claim" class="dvl-info">
+            <h3>{{ claim.UserName }}</h3>
+            <p>{{ claim.Email }}</p>
+        </div>
+    </div>
+    <div class="dvl-side-menu">
+        <h2>Main</h2>
+        <ul>
+            <li (click)="goToHomePageTem()"><fa-icon [icon]="faHome"></fa-icon><a>Home</a></li>
+        </ul>
+        <h2>Forms</h2>
+        <ul>
+            <li (click)="goToVacationsPageTem()"><fa-icon [icon]="faReceipt"></fa-icon><a>Vacations</a></li>
+            <li (click)="goToQuestionnairePageTem()"><fa-icon [icon]="faPlus"></fa-icon><a>Questionnaire</a></li>
+        </ul>
+        <h2>Others</h2>
+        <ul>
+            <li (click)="goToTimeWorkPageTem()"><fa-icon [icon]="faUserTimes"></fa-icon><a>TimeWork</a></li>
+        </ul>
+    </div>
+</div>

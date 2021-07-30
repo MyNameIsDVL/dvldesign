@@ -1,0 +1,52 @@
+<nav>
+    <span><img src="../../../assets/images/logodiamontdvl.png" alt="main logo" />Office Assistant</span>
+    <div class="dvl-wrapper">
+        <ul>
+            <li><a id="dvl-tools"><fa-icon [icon]="faTools"></fa-icon></a></li>
+            <li><a><fa-icon [icon]="faInfoCircle"></fa-icon></a></li>
+            <li><a (click)="logout()"><fa-icon [icon]="faSignOutAlt"></fa-icon></a></li>
+        </ul>
+    </div>
+</nav>
+<div id="dvl-settings-bar" class="dvl-settings-bar">
+    <div class="dvl-settings-bar-content">
+        <div class="dvl-account-changer">
+            <h3>Update your account</h3>
+            <span class="dvl-settings-information-span">
+                <p>It is recommended that you change your login information from time to time. You can do so here.</p>
+            </span>
+            <form>
+                <input type="text" name="UserName" placeholder="User name" />
+                <input type="password" name="Password" placeholder="Password" />
+                <button type="submit" name="submit">Save</button>
+            </form>
+        </div>
+        <div class="dvl-colour-set">
+            <h3>Dark/Light Mode</h3>
+            <span class="dvl-settings-information-span">
+                <p>Here you can customize the appearance of the application. Choose from two modes. Dark or light.</p>
+            </span>
+            <div class="dvl-center">
+                <input type="checkbox" id="toInput" style="display:none"/>
+                <label for="toInput" class="dvl-toggle"><span></span></label>    
+            </div>
+        </div>
+        <div class="dvl-avatar-set">
+            <h3>Set your image profile</h3>
+            <span class="dvl-settings-information-span">
+                <p>Here you can change your image profile.</p>
+            </span>
+            <form class="dvl-form" (ngSubmit)="uploadImgTem(Caption, Image, claim.UserName)">
+                <div class="dvl-group">
+                    <label for="Caption">Caption</label>
+                    <input type="text" #Caption ngModel name="Caption" id="Caption" required> 
+                </div>
+                <div class="dvl-group">
+                    <img [src]="imageURL" alt="image profile">
+                    <input type="file" #Image accept="image/*" (change)="handleFileInputTem($event.target.files)">
+                    <button type="submit" [disabled]="Caption.value === ''">Upload</button>
+                </div>  
+            </form>
+        </div>
+    </div>
+</div>

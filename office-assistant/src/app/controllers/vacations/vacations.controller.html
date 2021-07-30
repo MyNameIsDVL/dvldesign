@@ -1,0 +1,2 @@
+<app-vacations (registerVacation)="registerVacation($event)" [vac]="vac" [claim]="claim" *ngIf="$vacByLoggedUser | async as vacByLoggedUser"
+                [vacByLoggedUser]="vacByLoggedUser" (removeVacation)="removeVacation($event)" (getLoggedDataMethod)="getLoggedDataMethod()"></app-vacations>

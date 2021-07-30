@@ -1,0 +1,26 @@
+<div class="dvl-container">
+    <div class="dvl-card">
+        <div class="dvl-home-img">
+            <img src="../../../assets/images/home.webp" />
+        </div>
+        <div class="dvl-card-container">
+            <h2>Log in</h2>
+            <form #logInForm="ngForm" (ngSubmit)="login(UserName.value, Password.value)"> 
+                <div class="dvl-form-field">
+                    <label>User name</label>
+                    <input class="dvl-input" type="text" name="UserName" #UserName ngModel>
+                </div>
+                <div class="dvl-form-field">
+                    <label>Password</label>
+                    <input class="dvl-input" type="password" name="Password" #Password ngModel>
+                </div>
+                <div class="dvl-form-field">
+                    <button name="submit" type="submit">Log in</button>
+                </div>
+                <div class="dvl-form-field">
+                    <span>Go to&nbsp;<a (click)="goToHomeTem()">home</a>&nbsp;/&nbsp;<a (click)="goToSignInTem()">registration</a></span>
+                </div>
+            </form>
+        </div>      
+    </div>
+</div>

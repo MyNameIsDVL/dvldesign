@@ -1,0 +1,195 @@
+.dvl-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    margin: 10px 10px 10px 10px;
+}
+
+.dvl-box .dvl-quest-form {
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    padding: 10px;
+    border-radius: 10px;
+    height: 650px;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.dvl-box .dvl-quest-form form h3 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields::before {
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #241623;
+    display: block;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields:last-child::before {
+    display: none;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields .dvl-single-field {
+    display: block;
+    padding: 10px;
+    width: 100%;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields .dvl-single-field label {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields .dvl-single-field input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields button {
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box .dvl-quest-form form .dvl-fields button:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-display-none {
+    display: none !important;
+}
+
+.dvl-box .dvl-questionnaires {
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box {
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+    position: relative;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box table {
+    width: 100%;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box table .dvl-tb-header {
+    background-color: #241623;
+    
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box table .dvl-tb-header th {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px;
+    border: 1px solid #241623;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box table tr td {
+    padding: 10px;
+    border: 1px solid #241623;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box table tr td .que-group p {
+    margin: 0;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box .dvl-remove-btn {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box .dvl-remove-btn:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-box .dvl-questionnaires .dvl-no-data {
+    width: 100%;
+}
+
+.dvl-box .dvl-questionnaires .dvl-no-data h2 {
+    color: brown;
+    text-align: center;
+    font-weight: 400;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box .dvl-print-btn {
+    position: absolute;
+    top: -10px;
+    right: 120px;
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-box .dvl-questionnaires .dvl-que-box .dvl-print-btn:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}

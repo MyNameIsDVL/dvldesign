@@ -1,0 +1,29 @@
+<div class="dvl-home-box-container">
+    <div *ngIf="claim" class="dvl-box">
+        <h3>Your account details</h3>
+        <div class="dvl-content">
+            <p><span class="dvl-t">User name</span><span class="dvl-c">{{ claim.UserName }}</span></p>
+            <p><span class="dvl-t">Email</span><span class="dvl-c">{{ claim.Email }}</span></p>
+            <p><span class="dvl-t">First name</span><span class="dvl-c">{{ claim.FirstName }}</span></p>
+            <p><span class="dvl-t">Last name</span><span class="dvl-c">{{ claim.LastName }}</span></p>
+        </div>       
+    </div>
+    <div *ngIf="claim" class="dvl-box">
+        <h3>Your vacation limit</h3>
+        <div class="dvl-content">
+            <div class="dvl-limit-box">
+                <div class="dvl-percent">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="dvl-number">
+                        <h2>{{ claim.VacLimit }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>       
+    </div>
+</div>
+
+

@@ -1,0 +1,59 @@
+<form [formGroup]="modelForm" (ngSubmit)="updateTimeWorkByIdTem(modelForm, timeWorkEdit.Id)">
+    <div class="dvl-group dvl-display-none">
+        <label for="userName">UserName</label>
+        <input name="UserName" formControlName="UserName" class="form-control" type="text" id="userName"/>      
+    </div>
+    <div class="dvl-group">
+        <label for="monday">Monday</label>
+        <input name="Monday" formControlName="Monday" class="form-control" type="text" id="monday"/>      
+    </div>
+    <div class="dvl-group">
+        <label for="tuesday">Tuesday</label>
+        <input name="Tuesday" formControlName="Tuesday" class="form-control" type="text" id="tuesday"/>       
+    </div>
+    <div class="dvl-group">
+        <label for="wednesday">Wednesday</label>
+        <input name="Wednesday" formControlName="Wednesday" class="form-control" type="text" id="wednesday"/>
+    </div>
+    <div class="dvl-group">
+        <label for="thursday">Thursday</label>
+        <input name="Thursday" formControlName="Thursday" class="form-control" type="text" id="thursday"/>    
+    </div>
+    <div class="dvl-group">
+        <label for="friday">Friday</label>
+        <input name="Friday" formControlName="Friday" class="form-control" type="text" id="friday"/> 
+    </div>
+
+    <div class="dvl-group">
+        <label for="mondayDescription">MondayDescription</label>
+        <input name="MondayDescription" formControlName="MondayDescription" class="form-control" type="text" id="mondayDescription"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="tuesdayDescription">TuesdayDescription</label>
+        <input name="TuesdayDescription" formControlName="TuesdayDescription" class="form-control" type="text" id="tuesdayDescription"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="wednesdayDescription">WednesdayDescription</label>
+        <input name="WednesdayDescription" formControlName="WednesdayDescription" class="form-control" type="text" id="wednesdayDescription"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="thursdayDescription">ThursdayDescription</label>
+        <input name="ThursdayDescription" formControlName="ThursdayDescription" class="form-control" type="text" id="thursdayDescription"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="fridayDescription">FridayDescription</label>
+        <input name="FridayDescription" formControlName="FridayDescription" class="form-control" type="text" id="fridayDescription"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="dateFrom">DateFrom</label>
+        <input name="DateFrom" formControlName="DateFrom" class="form-control" type="text" id="dateFrom"/> 
+    </div>
+    <div class="dvl-group">
+        <label for="dateTo">DateTo</label>
+        <input name="DateTo" formControlName="DateTo" class="form-control" type="text" id="dateTo"/> 
+    </div>
+    <div class="dvl-group">
+        <button type="submit" class="btn btn-success" name="submit" id="submit" [disabled]="!modelForm.valid">Save</button>
+        <button type="button" class="btn btn-dark ml-2" name="cancel" id="cancel" (click)="goToTimeWorkPageTem()">Cancel</button>
+    </div>
+</form>

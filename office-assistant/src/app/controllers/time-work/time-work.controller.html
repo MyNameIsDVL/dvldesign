@@ -1,0 +1,3 @@
+<app-time-work *ngIf="$timeByLoggedUser | async as timeByLoggedUser" [timeByLoggedUser]="timeByLoggedUser" [timeWork]="timeWork"
+[claim]="claim" (registerTimeWork)="registerTimeWork($event)" (goToEditTimeWork)="goToEditTimeWork($event)"
+(removeTimeWorkById)="removeTimeWorkById($event)" (getLoggedDataMethod)="getLoggedDataMethod()"></app-time-work>

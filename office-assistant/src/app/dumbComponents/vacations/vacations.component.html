@@ -1,0 +1,75 @@
+<div class="dvl-box">
+    <div class="dvl-card">
+        <div class="dvl-card-container">
+            <h2>Vacation Registration Form</h2>
+            <form #vacationForm="ngForm" (ngSubmit)="registerVacationTem(vacationForm)"> 
+                <div class="dvl-form-field dvl-none" *ngIf="claim">
+                    <label>UserName</label>
+                    <input class="dvl-input" type="text" name="UserName" #UserName="ngModel" [(ngModel)]="claim.UserName">
+                </div>
+                <div class="dvl-form-field">
+                    <label>Type</label>
+                    <select class="dvl-select" type="text" name="Type" #Type="ngModel" [(ngModel)]="vac.Type">
+                        <option value="Vacations">Vacations</option>
+                        <option value="Doctor's appointment">Doctor's appointment</option>
+                        <option value="Free">Free</option>
+                        <option value="Special Leave">Special Leave</option>
+                        <option value="Childcare">Childcare</option>
+                        <option value="Paternity leave">Paternity leave</option>
+                        <option value="Maternity leave">Maternity leave</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="dvl-form-field">
+                    <label>Description</label>
+                    <input class="dvl-input" type="text" name="Description" #Description="ngModel" [(ngModel)]="vac.Description">
+                </div>
+                <div class="dvl-form-field">
+                    <label>VacDays</label>
+                    <input class="dvl-input" type="number" name="VacDays" #VacDays="ngModel" [(ngModel)]="vac.VacDays">
+                </div>
+                <div class="dvl-form-field">
+                    <label>DateIn</label>
+                    <input class="dvl-input dvl-date" type="date" name="DateIn" #DateIn="ngModel" [(ngModel)]="vac.DateIn">
+                </div>
+                <div class="dvl-form-field">
+                    <label>DateTo</label>
+                    <input class="dvl-input dvl-date" type="date" name="DateTo" #DateTo="ngModel" [(ngModel)]="vac.DateTo">
+                </div>
+                <div class="dvl-form-field">
+                    <button name="submit" type="submit">Save</button>
+                </div>
+            </form>
+        </div>      
+    </div>
+    <div class="dvl-100">
+        <h2>Registred vacations</h2>
+        <ul class="dvl-card-box-flex" *ngFor="let userDet of vacByLoggedUser">
+            <li>Type: {{ userDet.Type }}</li>
+            <li>Description: {{ userDet.Description }}</li>
+            <li>Number of days: {{ userDet.VacDays }}</li>
+            <li>From: {{ userDet.DateIn }}</li>
+            <li>To: {{ userDet.DateTo }}</li>
+            <button type="button" (click)="remove(userDet.Id); getLoggedDataMethodTem()" class="dvl-remove">Remove</button>
+        </ul>
+        <div class="dvl-empty" *ngIf="vacByLoggedUser.length === 0">
+            <h2>No Forms!</h2>
+        </div>
+    </div>
+    <div class="dvl-content">
+        <div class="dvl-limit-box">
+            <div class="dvl-percent">
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="dvl-number">
+                    <h2>{{ claim.VacLimit }}</h2>
+                </div>
+            </div>
+            <h3>Your limit</h3>
+        </div>
+    </div> 
+</div>
+
+

@@ -1,0 +1,112 @@
+<div class="dvl-box">
+    <div class="dvl-stopwatch">
+        <div class="screen">
+            <span id="hours">
+                00
+            </span>:
+            <span id="minutes">
+                00
+            </span>:
+            <span id="seconds">
+                00
+            </span>:
+            <span id="milisec">
+                00
+            </span>
+        </div>
+        <div class="dvl-buttons">
+            <button id="start"><fa-icon [icon]="faPlayCircle"></fa-icon></button>
+            <button id="stop"><fa-icon [icon]="faStop"></fa-icon></button>
+            <button id="reset"><fa-icon [icon]="faRedo"></fa-icon></button>
+        </div>
+    </div>
+    <form #timeWorkForm="ngForm" (ngSubmit)="registerTimeWorkTem(timeWorkForm)">
+        <div class="dvl-group-panel">
+            <div class="dvl-group">
+                <label>From</label>
+                <input type="date" name="DateFrom" #DateFrom="ngModel" [(ngModel)]="timeWork.DateFrom"/> 
+            </div>
+            <div class="dvl-group">
+                <label>To</label>
+                <input type="date" name="DateTo" #DateTo="ngModel" [(ngModel)]="timeWork.DateTo"/> 
+            </div>
+            <div class="dvl-group username-input-display-none" *ngIf="claim">
+                <input type="text" name="UserName" #UserName="ngModel" [(ngModel)]="claim.UserName" />
+            </div>
+            <div class="dvl-group">
+                <button type="submit" name="submit">Add new time work</button>
+            </div>
+        </div>
+    </form>
+    <div class="dvl-table-to-update" *ngFor="let time of timeByLoggedUser">
+        <form (ngSubmit)="goToEditTimeWorkTem(time.Id)">
+            <table class="container">
+                <thead>
+                    <tr>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                        <th>MondayDescription</th>
+                        <th>TuesdayDescription</th>
+                        <th>WednesdayDescription</th>
+                        <th>ThursdayDescription</th>
+                        <th>FridayDescription</th>
+                        <th>DateFrom</th>
+                        <th>DateTo</th>
+                        <th>Edit</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>               
+                    <tr>
+                        <td>
+                            <h3>{{ time.Monday }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.Tuesday }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.Wednesday }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.Thursday }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.Friday }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.MondayDescription }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.TuesdayDescription }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.WednesdayDescription }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.ThursdayDescription }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.FridayDescription }}</h3>
+                        </td>
+                        <td>
+                            <h3>{{ time.DateFrom }}</h3>
+                        </td>   
+                        <td>
+                            <h3>{{ time.DateTo }}</h3>
+                        </td>   
+                        <td>
+                            <button type="submit"><fa-icon [icon]="faEdit"></fa-icon></button>
+                        </td>   
+                        <td>
+                            <button type="button" (click)="removeTimeWorkByIdTem(time.Id); getLoggedDataMethodTem()"><fa-icon [icon]="faMinusCircle"></fa-icon></button>
+                        </td>                                 
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>  
+</div>
+

@@ -1,0 +1,50 @@
+.dvl-display-none {
+    display: none !important;
+}
+
+form {
+    padding: 20px;
+    width: 400px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+}
+
+form .dvl-group {
+    padding: 10px;
+    width: 100%;
+}
+
+form .dvl-group label {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+form .dvl-group input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+    width: 100%;
+}
+
+form .dvl-group button {
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 30px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 200px;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+form .dvl-group button:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}

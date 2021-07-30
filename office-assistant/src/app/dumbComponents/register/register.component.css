@@ -1,0 +1,116 @@
+.dvl-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dvl-container .dvl-card {
+    -webkit-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 10px rgba(0,0,0,0.8);
+    box-shadow:0 0 10px rgba(0,0,0,0.8);
+    background-color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.dvl-container .dvl-card .dvl-home-img {
+    width: 600px;
+    height: 100%;
+}
+
+.dvl-container .dvl-card .dvl-home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dvl-container .dvl-card .dvl-card-container {
+    padding: 20px;
+}
+
+.dvl-container .dvl-card .dvl-card-container h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #241623;
+    text-align: center;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field {
+    padding: 5px;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field label {
+    display: block;
+    color: #241623;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field input {
+    height: 30px;
+    font-size: 15px;
+    color: #241623;
+    outline: none;
+    border: 1px solid #241623;
+    border-radius: 2px;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field button::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -25px;
+    left: 0;
+    background-color: #241623;
+    height: 1px;
+    width: 100%;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field button {
+    border: 1px solid #241623;
+    color: #241623;
+    transition: 0.5s linear;
+    height: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field button:hover {
+    color: white;
+    border: 1px solid white;
+    background-color: #241623;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field span {
+    color: #241623;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field span a {
+    cursor: pointer;
+}
+
+.dvl-container .dvl-card .dvl-card-container .dvl-form-field span a:hover {
+    color: tomato;
+}
+
+/*style dla required field*/
+
+.dvl-alert {
+    border-bottom: 2px solid #F56476;
+    -webkit-box-shadow:0 0 10px rgba(41, 4, 4, 0.8);
+    -moz-box-shadow:0 0 10px rgba(41, 4, 4, 0.8);
+    box-shadow:0 0 10px rgba(41, 4, 4, 0.8);
+}

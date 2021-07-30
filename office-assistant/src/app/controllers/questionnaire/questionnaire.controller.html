@@ -1,0 +1,3 @@
+<app-questionnaire (registerQuestionnaire)="registerQuestionnaire($event)" [que]="que" [claim]="claim"
+*ngIf="$queByLoggedUser | async as queByLoggedUser" [queByLoggedUser]="queByLoggedUser" (removeQuestionnaire)="removeQuestionnaire($event)"
+(getLoggedDataMethod)="getLoggedDataMethod()" (downloadJsPdf)="downloadJsPdf($event)"></app-questionnaire>

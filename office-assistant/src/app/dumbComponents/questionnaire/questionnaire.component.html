@@ -1,0 +1,202 @@
+<div class="dvl-box">
+    <div class="dvl-quest-form">
+        <form #questionnaireForm="ngForm" (ngSubmit)="registerQueTem(questionnaireForm)">
+            <h3>Questionnaire form</h3>
+            <div class="dvl-fields dvl-display-none">
+                <div class="dvl-single-field" *ngIf="claim">
+                    <label>User Name</label>
+                    <input type="text" name="UserName" #UserName="ngModel" [(ngModel)]="claim.UserName"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>First Name</label>
+                    <input type="text" name="FirstName" #FirstName="ngModel" [(ngModel)]="que.FirstName"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>Last Name</label>
+                    <input type="text" name="LastName" #LastName="ngModel" [(ngModel)]="que.LastName"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>MothersName</label>
+                    <input type="text" name="MothersName" #MothersName="ngModel" [(ngModel)]="que.MothersName"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>FathersName</label>
+                    <input type="text" name="FathersName" #FathersName="ngModel" [(ngModel)]="que.FathersName"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>DateOfBirth</label>
+                    <input type="date" name="DateOfBirth" #DateOfBirth="ngModel" [(ngModel)]="que.DateOfBirth"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>Street</label>
+                    <input type="text" name="Street" #Street="ngModel" [(ngModel)]="que.Street"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>HomeNumber</label>
+                    <input type="number" name="HomeNumber" #HomeNumber="ngModel" [(ngModel)]="que.HomeNumber"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>ApartmentNumber</label>
+                    <input type="number" name="ApartmentNumber" #ApartmentNumber="ngModel" [(ngModel)]="que.ApartmentNumber" />
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>Education</label>
+                    <input type="text" name="Education" #Education="ngModel" [(ngModel)]="que.Education"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>SchoolName</label>
+                    <input type="text" name="SchoolName" #SchoolName="ngModel" [(ngModel)]="que.SchoolName"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>LastEmployer</label>
+                    <input type="text" name="LastEmployer" #LastEmployer="ngModel" [(ngModel)]="que.LastEmployer"/>
+                </div>
+                <div class="dvl-single-field">
+                    <label>PhoneNumber</label>
+                    <input type="text" name="PhoneNumber" #PhoneNumber="ngModel" [(ngModel)]="que.PhoneNumber"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <div class="dvl-single-field">
+                    <label>PeselNumber</label>
+                    <input type="text" name="PeselNumber" #PeselNumber="ngModel" [(ngModel)]="que.PeselNumber"/>
+                </div>
+            </div>
+            <div class="dvl-fields">
+                <button type="submit" name="submit">Add Questionnaire</button>
+            </div>
+        </form>
+    </div>
+    <div class="dvl-questionnaires">
+        <div class="dvl-que-box" *ngFor="let quest of queByLoggedUser">
+            <button (click)="downloadJsPdfTem(quest.UserName, quest.Id)" class="dvl-print-btn" type="button">Print</button>
+            <button (click)="removeQueTem(quest.Id); getLoggedDataMethodTem()" class="dvl-remove-btn" type="button">Remove</button>
+            <div class="dvl-jspdf-container" id="dvl-jspdf-to-print-{{quest.Id}}">
+                <h3>Questionnaire Form by {{ quest.UserName }}</h3>
+                <table>
+                    <tr class="dvl-tb-header">
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.FirstName }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.LastName }}</p>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="dvl-tb-header">
+                    <th>MothersName</th>
+                    <th>FathersName</th>
+                    <th>DateOfBirth</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.MothersName }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.FathersName }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.DateOfBirth }}</p>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="dvl-tb-header">
+                    <th>Street</th>
+                    <th>HomeNumber</th>
+                    <th>ApartmentNumber</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.Street }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.HomeNumber }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.ApartmentNumber }}</p>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="dvl-tb-header">
+                    <th>Education</th>
+                    <th>SchoolName</th>
+                    <th>LastEmployer</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.Education }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.SchoolName }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.LastEmployer }}</p>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr class="dvl-tb-header">
+                    <th>PhoneNumber</th>
+                    <th>PeselNumber</th>
+                    </tr>
+                    <tr>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.PhoneNumber }}</p>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="que-group">
+                            <p>{{ quest.SchoolName }}</p>
+                        </div>
+                    </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="dvl-no-data" *ngIf="queByLoggedUser.length === 0">
+            <h2>No Questionnaires!</h2>
+        </div>
+    </div>
+</div>
